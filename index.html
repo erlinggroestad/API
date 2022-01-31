@@ -1,22 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-
+  </head>
+  <body>
     <script>
-        class Food {
-            constructor (){
-                
-            }
+      class Coffee {
+        constructor(name, price) {
+          //constructor er ansvarlig for å lage nye objekter av typen Coffee.
+          this.name = name;
+          this.price = price;
+        }
+        addMilk() {
+          console.log(this.name + " milk added!");
         }
 
+        addSugar() {
+          console.log(this.name + " is now much sweeter! Price: ");
+        }
+      }
 
-
+      const coffeeOne = new Coffee("Kaffelatte", 29);
+      const coffeeTwo = new Coffee("Svart kaffe", 19);
+      console.log(coffeeOne.name);
+      console.log(coffeeTwo.price);
+      coffeeOne.addMilk();
+      coffeeTwo.addMilk();
+      coffeeOne.addSugar();
     </script>
-</body>
+  </body>
 </html>
